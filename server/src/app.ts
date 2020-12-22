@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cookieSession from 'cookie-session';
 import path from 'path';
-import helmet from 'helmet';
+// import helmet from 'helmet';
 
 import 'express-async-errors';
 import 'dotenv/config';
@@ -17,7 +17,7 @@ const app = express();
 if (process.env.NODE_ENV !== 'production') {
   app.use(morgan('dev'));
 }
-app.use(helmet());
+// app.use(helmet());
 app.use(express.json());
 app.set('trust proxy', true);
 app.use(
