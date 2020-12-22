@@ -10,7 +10,7 @@ import 'dotenv/config';
 import useRouter from './routes/userRoutes';
 import moviesRouter from './routes/moviesRoutes';
 import errorHandler from './middleware/error-handler';
-import NotFoundError from './errors/not-found-error';
+// import NotFoundError from './errors/not-found-error';
 
 const app = express();
 
@@ -33,9 +33,9 @@ app.use('/api/v1/users', useRouter);
 app.use('/api/v1/movies', moviesRouter);
 
 //error handler
-app.all('*', async (req, res) => {
-  throw new NotFoundError();
-});
+// app.all('*', async (req, res) => {
+//   throw new NotFoundError();
+// });
 
 app.use(errorHandler);
 
