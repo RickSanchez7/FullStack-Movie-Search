@@ -7,10 +7,10 @@ import path from 'path';
 import 'express-async-errors';
 import 'dotenv/config';
 
+// import NotFoundError from './errors/not-found-error';
 import useRouter from './routes/userRoutes';
 import moviesRouter from './routes/moviesRoutes';
 import errorHandler from './middleware/error-handler';
-// import NotFoundError from './errors/not-found-error';
 
 const app = express();
 
