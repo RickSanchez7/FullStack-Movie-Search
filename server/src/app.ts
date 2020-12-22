@@ -38,6 +38,7 @@ app.use('/api/v1/movies', moviesRouter);
 // });
 
 app.use(errorHandler);
+const __dirname = path.resolve();
 
 if (process.env.NODE_ENV === 'production') {
   // Express will serve up production assests like main.js, or main.css file!
