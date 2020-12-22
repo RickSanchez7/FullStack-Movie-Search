@@ -11,7 +11,6 @@
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "decorator-position/decorator-position": "error",
     "spaced-comment": "off",
     "no-console": "warn",
     "consistent-return": "off",
