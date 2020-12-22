@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "tsc -p .",
-    "start": "node build/index.js",
+    "start": "node ./build/index.js",
+    "web": "node ./build/index.js",
     "server": "nodemon --exec ts-node server/src/index.ts",
     "client": "npm start --prefix react-movie-db",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
