@@ -41,7 +41,7 @@ app.use(errorHandler);
 
 if (process.env.NODE_ENV === 'production') {
   // Express will serve up production assests like main.js, or main.css file!
-  app.use(express.static(path.join(__dirname, 'react-movie-db/build')));
+  app.use(express.static(path.join(__dirname, '/react-movie-db/build')));
   //Express will serve up the index.html file if it doesn't recognize the route
   app.get('*', (req, res) => {
     res.sendFile(
