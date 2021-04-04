@@ -19,7 +19,6 @@ export const addMovie = async (req: Request, res: Response) => {
 
 export const removeMovie = async (req: Request, res: Response) => {
   const { title, image, link } = req.body;
-  console.log(title);
 
   const movie = await User.findByIdAndUpdate(
     { _id: req.currentUser?.id },
