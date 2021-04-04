@@ -110,6 +110,7 @@ export const updateUserProfile = async (
       _id: updatedUser._id,
       name: updatedUser.name,
       email: updatedUser.email,
+      password: updatedUser.password,
       token: generateToken(updatedUser._id),
     });
   } else {

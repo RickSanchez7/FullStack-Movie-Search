@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cookieSession from 'cookie-session';
 import path from 'path';
+import compression from 'compression';
 // import helmet from 'helmet';
 
 import 'express-async-errors';
@@ -13,6 +14,7 @@ import errorHandler from './middleware/error-handler';
 // import NotFoundError from './errors/not-found-error';
 
 const app = express();
+app.use(compression());
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(morgan('dev'));
@@ -23,7 +25,7 @@ app.set('trust proxy', true);
 app.use(
   cookieSession({
     signed: false,
-    // secure: process.env.NODE_ENV !== 'test',
+    // secure: process.env.NODE_ENV !== 'development',
     secure: false,
   })
 );
