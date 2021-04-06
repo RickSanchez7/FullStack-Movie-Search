@@ -74,7 +74,7 @@ export const userProfile = async (req: RequestWithUser, res: Response) => {
     user = await User.findById(req.currentUser?.id);
   }
 
-  if (!user) res.send(null);
+  if (!user) return res.send(null);
 
   if (user) {
     res.send({
@@ -82,7 +82,6 @@ export const userProfile = async (req: RequestWithUser, res: Response) => {
       name: user.name,
       email: user.email,
       password: user.password,
-      favoriteMovies: user.favoriteMovies,
     });
   } else {
     throw new BadRequestError('User not found');
@@ -126,7 +125,7 @@ export const currentUser = async (req: Request, res: Response) => {
 export const signOut = (req: Request, res: Response) => {
   req.session = null;
 
-  res.send({});
+  res.send(null);
 };
 
 export const userFavoriteMovies = async (
@@ -138,7 +137,7 @@ export const userFavoriteMovies = async (
     user = await User.findById(req.currentUser?.id);
   }
 
-  if (!user) res.send(null);
+  if (!user) return res.send(null);
 
   if (user) {
     res.send({

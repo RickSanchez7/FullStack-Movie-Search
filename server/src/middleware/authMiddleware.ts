@@ -1,8 +1,8 @@
 import { NextFunction, Response } from 'express';
-import jwt from 'jsonwebtoken';
+// import jwt from 'jsonwebtoken';
 import BadRequestError from '../errors/bad-request-error';
-import NotAuthorizedError from '../errors/not-authorized-error';
-import User from '../models/User';
+// import NotAuthorizedError from '../errors/not-authorized-error';
+// import User from '../models/User';
 import { RequestWithUser } from '../utils/typescriptHelpers';
 
 const protect = async (
