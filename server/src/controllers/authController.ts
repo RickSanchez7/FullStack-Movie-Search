@@ -125,7 +125,7 @@ export const currentUser = async (req: Request, res: Response) => {
 export const signOut = (req: Request, res: Response) => {
   req.session = null;
 
-  res.send(null);
+  res.send({ data: null });
 };
 
 export const userFavoriteMovies = async (
