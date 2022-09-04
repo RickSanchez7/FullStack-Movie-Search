@@ -6,7 +6,7 @@ type matchPasswordFunction = (
   enteredPassword: string,
   // eslint-disable-next-line
   suppliedPassword: string
-) => void;
+) => Promise<boolean>;
 
 type changedPasswordAfterFunction = (
   // eslint-disable-next-line
